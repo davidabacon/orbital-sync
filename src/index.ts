@@ -56,16 +56,18 @@ if (MQTT_BROKER_URL) {
 
     if (!config.runOnce) {
       log.info(chalk.dim(`Waiting ${config.intervalMinutes} minutes...`));
-    // Wait for timer to pop or MQTT event to be received
-    await Promise.race([
-    sleep(config.intervalMinutes * 60 * 1000), //wait for interval
-    MQTT_BROKER_URL ? new Promise(resolve => eventEmitter.once('syncNow', resolve)) : Promise.resolve(),
-    ]);}
-} while (!config.runOnce);
+      // Wait for timer to pop or MQTT event to be received
+      await Promise.race([
+        sleep(config.intervalMinutes * 60 * 1000), //wait for interval
+        MQTT_BROKER_URL
+          ? new Promise((resolve) => eventEmitter.once('syncNow', resolve))
+          : Promise.resolve()
+      ]);
+    }
+  } while (!config.runOnce);
 
-
-//Cleanup 
-if (mqttClient) {
-	mqttClient.end();
-}
+  //Cleanup
+  if (mqttClient) {
+    mqttClient.end();
+  }
 })();

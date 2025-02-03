@@ -1,5 +1,8 @@
 ### Changelog
 
+## [1.8.5]() (2025-02-02)
+* Added feature to optionally listen for events posted to MQTT - so that when you don't want to wait for your interval to expire you can poke things into synchronizing (without having to rebboot the container)
+
 
 ## [1.8.4](https://github.com/mattwebbio/orbital-sync/compare/v1.8.3...v1.8.4) (2025-01-11)
 

@@ -29,7 +29,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^19.1.0",
     "@tsconfig/node18": "^18.2.3",
-    "@types/jest": "^29.5.12",
+    "@types/jest": "^29.5.14",
     "@types/luxon": "^3.4.2",
     "@types/mustache": "^4.2.5",
     "@types/node": "^18.8.0",
@@ -46,7 +46,7 @@
     "prettier": "^3.2.5",
     "tempy": "^3.1.0",
     "testcontainers": "^10.7.2",
-    "ts-jest": "^29.1.2",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3"
   },
@@ -56,12 +56,11 @@
     "chalk": "^4.1.2",
     "fetch-cookie": "^3.0.1",
     "json-schema-to-ts": "^3.0.1",
+    "mqtt": "^4.3.7",
     "mustache": "^4.2.0",
     "node-fetch": "^3.3.2",
     "node-html-parser": "^7.0.1",
     "nodemailer": "^6.9.13",
-    "sleep-promise": "^9.1.0",
-    "mqtt": "^4.3.7"
-
+    "sleep-promise": "^9.1.0"
   }
 }

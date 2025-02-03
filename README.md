@@ -35,6 +35,15 @@ doesn't bring down your whole network.
 
 Set up your secondary Pi-hole instance(s) just like you did your primary. Once that's done, choose one of the following:
 
+### New Feature: Integration with MQTT
+
+If you want to use the MQTT integration, set the following environment variables:
+
+- `MQTT_BROKER_URL`: URL of your MQTT broker
+- `MQTT_TOPIC`: Topic for publishing data
+
+You can specify these variables in your `.env` file.
+
 ### Docker
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/mattwebbio/orbital-sync?logo=docker&style=for-the-badge)](https://hub.docker.com/r/mattwebbio/orbital-sync)
